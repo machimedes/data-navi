@@ -1,0 +1,22 @@
+server:
+  port: 8087
+spring:
+  devtools:
+    restart:
+      enabled: true  # Set to enable hot deployment
+      additional-paths: src/main/java # restart directory
+    exclude: WEB-INF/**
+    thymeleaf:
+      cache: false # Use Thymeleaf template engine, turn off caching
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://10.0.4.36:3306/data_navi
+    username: root
+    password: 123456!@#Qwe
+    driverClassName:  com.mysql.cj.jdbc.Driver
